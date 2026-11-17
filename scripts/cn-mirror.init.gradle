@@ -1,0 +1,16 @@
+// 可选：dl.google.com 无法访问时（如国内网络），用阿里云镜像解析 Google Maven：./gradlew -I scripts/cn-mirror.init.gradle assembleDebug
+def googleGroups = { c ->
+    c.includeGroupByRegex('com\\.android(\\..*)?')
+    c.includeGroupByRegex('com\\.google\\.android(\\..*)?')
+    c.includeGroupByRegex('com\\.google\\.testing(\\..*)?')
+    c.includeGroupByRegex('androidx(\\..*)?')
+}
+beforeSettings { settings ->
+    settings.pluginManagement.repositories {
+        maven { url = uri('https://maven.aliyun.com/repository/google'); content { googleGroups(it) } }
+        maven { url = uri('https://maven.aliyun.com/repository/gradle-plugin') }
+    }
+    settings.dependencyResolutionManagement.repositories {
+        maven { url = uri('https://maven.aliyun.com/repository/google'); content { googleGroups(it) } }
+    }
+}

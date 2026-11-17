@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Edge TTS 引擎</string>
+    <string name="engine_label">Edge 语音引擎</string>
+    <string name="settings_title">Edge TTS 引擎设置</string>
+    <string name="privacy_summary">非官方 Edge 大声朗读客户端。朗读文本、语音、语速和音调会发到微软 speech.platform.bing.com。本程序以 GNU LGPLv3 only 授权。</string>
+    <string name="debug_signing_notice">此包是 Android debug 签名，不是正式发布签名。不能覆盖旧版本，必须先卸载。没有在真机上验证。</string>
+    <string name="open_privacy">查看隐私说明</string>
+    <string name="open_lgpl">查看 LGPLv3 全文</string>
+    <string name="open_gpl">查看 GPLv3 全文</string>
+</resources>
